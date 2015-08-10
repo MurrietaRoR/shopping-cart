@@ -1,3 +1,9 @@
+//common extend
+.brand_name {
+  span {
+    color: $headings-color;
+  }
+}
 body {
   background-color: #f1f1f1;
 }
@@ -15,6 +21,11 @@ body {
   margin-bottom: 30px;
 }
 
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8em;
+  @extend .brand_name;
+}
 .footer {
   padding: 30px 0;
   margin-top: 70px;

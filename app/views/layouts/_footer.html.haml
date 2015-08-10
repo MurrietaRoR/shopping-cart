@@ -58,4 +58,5 @@
       %section
         %hr
         = succeed "." do
-          = "Murrieta Shop © Copyright" + " #{Time.now.year}"
+          %span.brand_name= brand_name.html_safe
+          = "© Copyright" + " #{Time.now.year}"
