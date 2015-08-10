@@ -7,4 +7,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body{ data: { controller: controller.controller_path, action: controller.action_name }, class: "#{controller.action_name} #{controller.controller_path}".parameterize }
+    = render 'layouts/navigations'
     %section.main-wrapper= yield
+    = render 'layouts/footer'

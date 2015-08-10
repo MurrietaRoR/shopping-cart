@@ -1,0 +1,61 @@
+%footer.footer
+  .container
+    .row
+      .col-md-3.col-sm-6.col-xs-12
+        %h4.title_block Latest From Blog
+        %ul.list-group.list-unstyled
+          %li.item
+            -# = link_to this_is_label, this_is_link_path, this_is_link_title
+            = link_to 'Wishlist', "#", title: "Wishlist"
+          %li.item
+            = link_to "Your Account", "#", title: "Your Account"
+          %li.item
+            = link_to "Checkout", "#", title: "Check"
+          %li.item
+            = link_to "Login", "#", title: "Login"
+          %li.item
+            = link_to "Register", title: "Register"
+      .col-md-3.col-sm-6.col-xs-12
+        %h4.title_block Infomations
+        %ul.list-group.list-unstyled
+          %li.item
+            = link_to "About Us", "#", title: "About Us"
+          %li.item
+            = link_to "Contact Us", "#", title: 'Contact Us'
+          %li.item
+            = link_to "Terms & Conditions", "#", title: "Terms & Conditions"
+          %li.item
+            = link_to "Privacy Policy", "#", title: "Privacy Policy"
+          %li.item
+            = link_to "Site Map", "#", title: "Site Map"
+      .col-md-3.col-sm-6.col-xs-12
+        %h4.title_block Service & Support
+        %ul.list-group.list-unstyled
+          %li.item
+            = link_to "About Us", "#", title: "About Us"
+          %li.item
+            = link_to "Jobs", "#", title: "Jobs"
+          %li.item
+            = link_to "Affiliates", "#", title: "Affiliates"
+          %li.item
+            = link_to "Contact", "#", title: "Contact"
+          %li.item
+            = link_to "Blog", "#", title: "Blog"
+      .col-md-3.col-sm-6.col-xs-12
+        %h4.title_block About Store
+        .footer_contact
+          %strong Warehouse & Offices
+          %p
+            12345 Street name, California, USA
+            %br>/
+            0123 456 789 / 0123 456 788
+          %strong Retail Store
+          %p
+            54321 Street name, California, USA
+            %br>/
+            0123 456 789 / 0123 456 788
+    .row
+      %section
+        %hr
+        = succeed "." do
+          = "Murrieta Shop © Copyright" + " #{Time.now.year}"

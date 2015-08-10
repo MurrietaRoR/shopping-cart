@@ -1,0 +1,66 @@
+%nav.navbar.navbar-default.margin-bottom-none
+  .container
+    -# Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to "Murrieta Shop", "#", class: "navbar-brand"
+    -# Collect the nav links, forms, and other content for toggling
+    #navbar-collapse-1.collapse.navbar-collapse
+      -# temporary form we should use form_for(@example) here
+      %form.navbar-form.navbar-left{:role => "search"}
+        .form-group
+          %input.form-control{:placeholder => "Search", :type => "text"}/
+        %button.btn.btn-default{:type => "submit"} Submit
+      %ul.nav.navbar-nav
+        %li.active
+          = link_to "#", title: "Shoes" do
+            = "Shoes"
+            %span.sr-only (current)
+        %li
+          = link_to "Clothing", "#", title: "Clothing"
+        %li
+          = link_to "Bags", "#", title: "Bags"
+        %li
+          = link_to "Accessories", "#", title: "Accessories"
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Dropdown
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              = link_to "Link 1", "#", title: " "
+            %li
+              = link_to "Link 2", "#", title: " "
+            %li
+              = link_to "Link 3", "#", title: " "
+            %li.divider{:role => "separator"}
+            %li
+              = link_to "Link 4", "#", title: " "
+            %li.divider{:role => "separator"}
+            %li
+              = link_to "Link 5", "#", title: " "
+
+      %ul.nav.navbar-nav.navbar-right
+        %li
+
+          = link_to  "#" do
+            %i.glyphicon.glyphicon-shopping-cart
+            = 'Cart'
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            User Name
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              = link_to "Account", "#", title: " "
+            %li
+              = link_to "Link", "#", title: " "
+            %li
+              = link_to "Link", "#", title: " "
+            %li.divider{:role => "separator"}
+            %li
+              = link_to "Sign Out", "#", title: " "
