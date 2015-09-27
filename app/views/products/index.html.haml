@@ -1,0 +1,15 @@
+.container
+  .row.text-center
+    %h1
+      = @category.name.upcase
+    .row.line-icon-wrapper.clearfix
+      %em.line
+        %i.glyphicon.glyphicon-star
+
+  - @products.each do |product|
+    .row.grid-pad
+      .col-lg-6.col-md-6.col-sm-12
+        = image_tag('http://placehold.it/320x180', class: "img-responsive")
+      .col-lg-6.col-md-6.col-sm-12
+        = product.name
+        = number_to_currency product.price

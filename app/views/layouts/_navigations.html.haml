@@ -18,16 +18,9 @@
           %input.form-control{:placeholder => "Search", :type => "text"}
         %button.btn.btn-default{:type => "submit"} Submit
       %ul.nav.navbar-nav
-        %li.active
-          = link_to "#", title: "Shoes" do
-            = "Shoes"
-            %span.sr-only (current)
-        %li
-          = link_to "Clothing", "#", title: "Clothing"
-        %li
-          = link_to "Bags", "#", title: "Bags"
-        %li
-          = link_to "Accessories", "#", title: "Accessories"
+        - categories.each do |cat|
+          %li
+            = link_to "#{cat.name}", products_path(category_id: cat.id)
         %li.dropdown
           %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             Dropdown
