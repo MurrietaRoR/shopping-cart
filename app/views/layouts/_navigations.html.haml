@@ -7,9 +7,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to"#", class: "navbar-brand" do
-        %i.glyphicon.glyphicon-th-large
-        = brand_name.html_safe
+      = render 'layouts/branding'
     -# Collect the nav links, forms, and other content for toggling
     #navbar-collapse-1.collapse.navbar-collapse
       -# temporary form we should use form_for(@example) here
@@ -66,8 +64,11 @@
                 = link_to "Link", "#", title: " "
               %li.divider{:role => "separator"}
               %li
-                = link_to "Sign Out", logout_path, method: "delete", title: " "
+                = link_to "Log Out", logout_path, method: "delete", title: " "
         - else
-          %li= link_to "Login", login_path
-          %li= link_to "Signup", signup_path
-          
+          %li.custom-inline
+            = link_to login_path do
+              %strong= "Log In"
+            = "| "
+            = link_to signup_path do
+              %strong= "Sign Up"
