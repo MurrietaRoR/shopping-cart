@@ -3,6 +3,7 @@
   = render 'layouts/head'
 
   %body{ data: { controller: controller.controller_path, action: controller.action_name }, class: "#{controller.action_name} #{controller.controller_path}".parameterize }
+    = render 'layouts/alert'
     - if content_for? :landing
       = yield :landing
     - else

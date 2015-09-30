@@ -15,7 +15,9 @@
   font-size: 1.8em;
   @extend .brand_name;
 }
-
+.alert {
+  margin-bottom: 0px;
+}
 body {
   background-color: #f1f1f1;
 }
