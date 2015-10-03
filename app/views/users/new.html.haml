@@ -1,0 +1,26 @@
+- content_for :landing do
+  .container.register
+    .pad-top
+      .row
+        .col-lg-4.col-md-4.col-sm-12.col-xs-12.col-lg-offset-4
+          .navbar-default.text-center.pad-top.pad-bottom
+            = render 'layouts/branding'
+      .row
+        .col-lg-4.col-md-4.col-sm-12.col-xs-12.col-lg-offset-4
+          .panel
+            .form
+              %h1.text-center Sign Up
+              = form_for @user do |f|
+                .form-group
+                  = f.text_field :first_name, placeholder: :first_name, class: "form-control"
+                .form-group
+                  = f.text_field :last_name, placeholder: :last_name, class: "form-control"
+                .form-group
+                  = f.text_field :email, placeholder: :email, class: "form-control"
+                .form-group
+                  = f.password_field :password, placeholder: :password, class: "form-control"
+                .form-group
+                  = f.submit "Sign Up", class: "btn btn-primary btn-lg btn-block"
+          %p
+            Already signed up?
+            %span= link_to "Login", login_path

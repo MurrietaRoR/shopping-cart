@@ -55,8 +55,16 @@ ActiveRecord::Schema.define(version: 20150924025443) do
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
-
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "products", "categories"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 end
