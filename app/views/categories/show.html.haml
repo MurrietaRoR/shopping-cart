@@ -1,6 +1,7 @@
 .container
   .row.text-center
-    %h1 Products
+    %h1
+      = @category.name.upcase
     .row.line-icon-wrapper.clearfix
       %em.line
         %i.glyphicon.glyphicon-star

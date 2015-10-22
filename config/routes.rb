@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#home'
 
-  resources :categories, only: :index
+  resources :categories, only: :show
   resources :products, only: [:index, :show]
 
   # Example of regular route:
