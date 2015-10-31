@@ -1,6 +1,29 @@
-.row.grid-pad
-  .col-lg-6.col-md-6.col-sm-12
-    = image_tag('http://placehold.it/320x180', class: "img-responsive")
-  .col-lg-6.col-md-6.col-sm-12
-    = product.name
-    = number_to_currency product.price
+-# .row.grid-pad
+-#   .col-lg-6.col-md-6.col-sm-12
+-#     = image_tag('http://placehold.it/320x180', class: "img-responsive")
+-#   .col-lg-6.col-md-6.col-sm-12
+-#     = product.name
+-#     = number_to_currency product.price
+
+
+.well
+
+  .row
+    .col-lg-6.col-md-6.col-sm-12
+      = image_tag('http://placehold.it/320x180', class: "img-responsive")
+
+    .col-xs-8
+      %h4
+        = product.name
+    .col-xs-4
+
+      = form_for order_item, remote: true do |f|
+        %h4.text-right
+          Unit Price:
+          %span{style: "color: green"}
+            = number_to_currency product.price
+        .input-group
+          = f.number_field :quantity, value: 1, class: "form-control", min: 1
+          .nput-group-btn
+            = f.hidden_field :product_id, value: product.id
+            = f.submit "Add to Cart", class: "btn btn-primary"

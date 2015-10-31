@@ -21,11 +21,8 @@
             = link_to "#{cat.name}", category_path(cat)
 
       %ul.nav.navbar-nav.navbar-right
-        %li
-
-          = link_to  "#" do
-            %i.glyphicon.glyphicon-shopping-cart
-            = 'Cart'
+        %li.cart-text
+          = render '/layouts/cart_text'
         - if current_user
           %li.dropdown
             %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
